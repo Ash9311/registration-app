@@ -39,8 +39,6 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     if (this.registrationForm.valid) {
       const registrationData = this.registrationForm.value;
-      // Mock API call (since API implementation is skipped)
-      this.appService.currentTab = 'complete'
       this.registrationService.register(registrationData).subscribe({
         next: () => { this.appService.currentTab = 'complete' }
         ,

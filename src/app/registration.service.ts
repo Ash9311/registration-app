@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class RegistrationService {
-  
+
   private apiUrl = 'https://codingexercise.speakcore.com/api/registrations';
   constructor(private http: HttpClient) { }
 
