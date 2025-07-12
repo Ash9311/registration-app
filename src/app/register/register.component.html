@@ -1,0 +1,51 @@
+<div class="register-container">
+  <div class="step-header">
+    <span>CONTACT INFORMATION</span>
+  </div>
+  <div class="stepper">
+    <div class="stepper-num">
+      <span>1</span> <span>2</span> <span>3</span>
+    </div>
+    <div class="stepper-label">
+      <span>REGISTER</span>
+      <span>SUBMIT INFO</span>
+      <span>COMPLETE</span>
+    </div>
+  </div>
+  <div class="register-box">
+    <p>Please fill in the following required information.</p>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label>First Name: *</label>
+        <input type="text" formControlName="firstName" required>
+      </div>
+      <div>
+        <label>Last Name: *</label>
+        <input type="text" formControlName="lastName" required>
+      </div>
+      <div>
+        <label>State: *</label>
+        <select formControlName="state" required style="width: 30%;">
+          <option value="">Select State</option>
+          <option value="NJ">NJ</option>
+          <option value="NY">NY</option>
+        </select>
+      </div>
+      <p>Please provide your email address. All meeting correspondence will be sent via email.</p>
+      <div>
+        <label>Email: *</label>
+        <input type="email" formControlName="email" required>
+      </div>
+      <div>
+        <label>Confirm Email: *</label>
+        <input type="email" formControlName="confirmEmail" required>
+      </div>
+      <div class="sub-news-container">
+        <label><input type="checkbox" formControlName="subscribe"> Subscribe to Newsletter</label>
+      </div>
+      <div class="continue-btn-container">
+        <button type="submit" class="continue-btn" [disabled]="registrationForm.invalid">Continue</button>
+      </div>
+    </form>
+  </div>
+</div>

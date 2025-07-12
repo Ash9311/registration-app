@@ -1,0 +1,15 @@
+<div class="login-container">
+  <div class="step-header">
+    <div>LOGIN</div>
+  </div>
+  <div class="login-box">
+    <p>Please enter the case sensitive password from your official invitation.</p>
+    <form (ngSubmit)="onLogin()" class="form-container">
+      <label>Password:</label>
+      <input type="password" [(ngModel)]="password" name="password" required>
+      <div class="login-btn-container">
+        <button type="submit" class="login-btn">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
